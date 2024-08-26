@@ -9,7 +9,7 @@ This repository contains the code and configuration files for a data pipeline bu
 
 **Pipeline Diagram 1:**
 
-![OULAD pipeline high-level diagram ](diagrams/OULAD_pipeline01.png)
+![OULAD pipeline high-level diagram ](diagrams/OULAD_pipeline1.png)
 
 **Pipeline Diagram 2:**
 
