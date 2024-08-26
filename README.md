@@ -1,6 +1,7 @@
 # OULAD Data Pipeline Project
 
 This repository contains the code and configuration files for a data pipeline built using Apache Airflow, Hadoop (HDFS), PySpark, and MySQL. The pipeline processes educational data from the Open University Learning Analytics Dataset (OULAD) and stores aggregated data in a MySQL database for real-time use.
+### You can download the Open University Learning Analytics Dataset (OULAD) from [this link](https://analyse.kmi.open.ac.uk/open_dataset).
 
 ## Diagrams
 
