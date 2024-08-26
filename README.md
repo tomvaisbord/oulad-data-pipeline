@@ -1,9 +1,41 @@
-# oulad-data-pipeline
-This repository contains the code and configuration files for a data pipeline built using Apache Airflow, Hadoop (HDFS), PySpark, and MySQL. The pipeline processes educational data from the Open University Learning Analytics Dataset (OULAD) and stores aggregated data in a MySQL database for real-time use.
-=======
 # OULAD Data Pipeline Project
 
 This repository contains the code and configuration files for a data pipeline built using Apache Airflow, Hadoop (HDFS), PySpark, and MySQL. The pipeline processes educational data from the Open University Learning Analytics Dataset (OULAD) and stores aggregated data in a MySQL database for real-time use.
+
+## Diagrams
+
+### High-Level Overview of the Pipeline
+
+**Pipeline Diagram 1:**
+
+![OULAD pipeline high-level diagram ](diagrams/OULAD_pipeline01.png)
+
+**Pipeline Diagram 2:**
+
+![OULAD Pipeline tasks Diagram ](diagrams/OULAD_pipeline2.png)
+
+---
+
+## Table of Contents
+- **[Prerequisites](#prerequisites)**
+- **[Setup](#setup)**
+  - [1. Set Up Your Environment](#1-set-up-your-environment)
+    - [Virtual Environment](#virtual-environment)
+    - [Issues Encountered](#issues-encountered)
+  - [2. Hadoop Configuration](#2-hadoop-configuration)
+    - [SSH Configuration for Hadoop](#ssh-configuration-for-hadoop)
+    - [Issues Encountered](#issues-encountered-1)
+  - [3. MySQL Configuration](#3-mysql-configuration)
+    - [Issues Encountered](#issues-encountered-2)
+  - [4. Airflow Configuration](#4-airflow-configuration)
+    - [Issues Encountered](#issues-encountered-3)
+  - [5. DAG Script](#5-dag-script)
+    - [Issues Encountered](#issues-encountered-4)
+  - [6. Execution](#6-execution)
+- **[Conclusion](#conclusion)**
+  - [High-Level Overview of the Pipeline](#high-level-overview-of-the-pipeline)
+  - [Summary of Components Involved](#summary-of-components-involved)
+
 
 ## Prerequisites
 
@@ -148,7 +180,7 @@ This project demonstrates a complete ETL (Extract, Transform, Load) data pipelin
 
 1. **Data Extraction:**
    - The pipeline begins with the extraction of data from a ZIP file containing the Open University Learning Analytics Dataset (OULAD). 
-   - **Component:** Apache Airflow's `BashOperator` triggers a shell command that unzips the data and loads it into **Hadoop HDFS**.
+   - **Component:** Apache Airflow's BashOperator triggers a shell command that unzips the data and loads it into **Hadoop HDFS**.
 
 2. **Data Loading to HDFS:**
    - The extracted files are moved into a specific directory within the Hadoop Distributed File System (HDFS).
@@ -172,4 +204,3 @@ This project demonstrates a complete ETL (Extract, Transform, Load) data pipelin
 - **Hadoop (HDFS):** Handles distributed storage of raw and transformed data, ensuring data resilience.
 - **Apache Spark (PySpark):** Performs data transformations on large datasets using distributed processing.
 - **MySQL:** Acts as the final storage for the processed data, making it available for real-time querying and analysis.
->>>>>>> e2e3019 (Initial commit: Add OULAD data pipeline project with all scripts and configurations)
